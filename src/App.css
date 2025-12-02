@@ -1,0 +1,523 @@
+.app {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1f2937 0, #020617 45%, #000 100%);
+  color: #f9fafb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.95), rgba(8, 47, 73, 0.9));
+  backdrop-filter: blur(14px);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+}
+
+.app-header p {
+  margin: 0.25rem 0 0;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.header-right .user-pill {
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(59, 130, 246, 0.6);
+  box-shadow: 0 0 18px rgba(37, 99, 235, 0.5);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.app-main {
+  padding: 1.5rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Tabs */
+.tab-nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.8);
+  padding-bottom: 0.4rem;
+}
+
+.tab {
+  position: relative;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  padding: 0.4rem 0.9rem 0.5rem;
+  font-size: 0.85rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.15s ease, background 0.15s ease, transform 0.12s ease;
+}
+
+.tab-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #6b7280;
+}
+
+.tab:hover {
+  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.7);
+  transform: translateY(-1px);
+}
+
+.tab.active {
+  color: #e5e7eb;
+  background: rgba(37, 99, 235, 0.12);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.tab.active .tab-dot {
+  background: #60a5fa;
+}
+
+/* Sections */
+.section {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 1rem;
+  border: 1px solid rgba(30, 64, 175, 0.7);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* KPI Grid */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.85rem;
+}
+
+.kpi-card {
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.17), #020617);
+  border-radius: 0.85rem;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(30, 64, 175, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 0.23rem;
+}
+
+.kpi-card.kpi-accent {
+  box-shadow: 0 0 26px rgba(59, 130, 246, 0.65);
+}
+
+.kpi-label {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.kpi-value {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.kpi-sub {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Ticket table */
+.table-wrapper {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid rgba(31, 41, 55, 0.9);
+  margin-top: 0.5rem;
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.ticket-table th,
+.ticket-table td {
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+}
+
+.ticket-table th {
+  font-weight: 500;
+  color: #9ca3af;
+  background: rgba(15, 23, 42, 0.95);
+}
+
+.ticket-table tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.ticket-table tr:hover {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+/* Status + Priority Pills */
+.status-pill,
+.prio-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.status-open {
+  background: rgba(248, 250, 252, 0.05);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.6);
+}
+
+.status-in_progress {
+  background: rgba(59, 130, 246, 0.08);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.7);
+}
+
+.status-closed {
+  background: rgba(22, 163, 74, 0.09);
+  color: #6ee7b7;
+  border: 1px solid rgba(22, 163, 74, 0.8);
+}
+
+.prio-low {
+  background: rgba(55, 65, 81, 0.7);
+  color: #e5e7eb;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.prio-medium {
+  background: rgba(234, 179, 8, 0.08);
+  color: #fbbf24;
+  border: 1px solid rgba(234, 179, 8, 0.7);
+}
+
+.prio-high {
+  background: rgba(185, 28, 28, 0.1);
+  color: #fb7185;
+  border: 1px solid rgba(185, 28, 28, 0.9);
+}
+
+/* Icon-Button für + */
+.icon-button {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid rgba(59, 130, 246, 0.8);
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.4), #020617);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+}
+
+.icon-button:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 0 26px rgba(59, 130, 246, 0.9);
+}
+
+.icon-plus {
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+
+.icon-plus::before,
+.icon-plus::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+.icon-plus::before {
+  width: 2px;
+  height: 14px;
+}
+
+.icon-plus::after {
+  width: 14px;
+  height: 2px;
+}
+
+/* Ticket-Form-Card */
+.section-subcard {
+  margin-bottom: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(37, 99, 235, 0.8);
+  background: radial-gradient(circle at top left, rgba(37, 99, 235, 0.25), #020617);
+}
+
+/* Formular (falls noch nicht drin) */
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.ticket-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ticket-form-field {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ticket-form-field.small {
+  max-width: 180px;
+}
+
+.ticket-form-field label {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.ticket-form-field input,
+.ticket-form-field select {
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #1f2937;
+  background: rgba(15, 23, 42, 0.9);
+  color: #f9fafb;
+  font-size: 0.85rem;
+}
+
+.ticket-form-field input:focus,
+.ticket-form-field select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.ticket-form-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ticket-form-error {
+  font-size: 0.8rem;
+  color: salmon;
+}
+
+.ticket-form button {
+  padding: 0.45rem 0.9rem;
+  border-radius: 9999px;
+  border: 1px solid #2563eb;
+  background: #1d4ed8;
+  color: #f9fafb;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.ticket-form button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* 2-Spalten-Grid für zukünftige Reiter */
+.grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+  gap: 1rem;
+}
+
+.card-elevated {
+  border-radius: 0.85rem;
+  border: 1px solid rgba(30, 64, 175, 0.7);
+  padding: 1rem 1.1rem;
+  background: radial-gradient(circle at top left, rgba(15, 118, 110, 0.18), #020617);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.9);
+}
+
+.bullet-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+.bullet-list li + li {
+  margin-top: 0.25rem;
+}
+
+.soft-grid {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.vehicle-grid {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.mini-label {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.mini-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.mini-value-warn {
+  color: #fb7185;
+}
+
+.mini-bar {
+  position: relative;
+  margin-top: 0.25rem;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(31, 41, 55, 0.8);
+  overflow: hidden;
+}
+
+.mini-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #22c55e, #3b82f6);
+}
+
+/* Toolbar über Tabellen (Suche + Filter) */
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.toolbar-group {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.toolbar-search {
+  min-width: 260px;
+  max-width: 420px;
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #1f2937;
+  background: rgba(15, 23, 42, 0.9);
+  color: #f9fafb;
+  font-size: 0.85rem;
+}
+
+.toolbar-search::placeholder {
+  color: #6b7280;
+}
+
+.toolbar-search:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.toolbar-label {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.toolbar-label select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #1f2937;
+  background: rgba(15, 23, 42, 0.9);
+  color: #f9fafb;
+  font-size: 0.8rem;
+}
+
+/* Badge in Kopfzeile SIM-Tab */
+.sim-kpi-badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.7);
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.35), #020617);
+  font-size: 0.8rem;
+}
+
+.sim-kpi-badge span {
+  font-weight: 600;
+}
+
+/* Scrollbare Tabelle für viele Spalten */
+.scrollable-table {
+  max-height: 420px;
+  overflow: auto;
+}
+
+/* Optional: leicht andere Breite für SIM-Tabelle */
+.sim-table th,
+.sim-table td {
+  white-space: nowrap;
+  font-size: 0.78rem;
+}
