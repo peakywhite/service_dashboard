@@ -715,3 +715,84 @@
   color: #e5e7eb;
   box-shadow: 0 0 16px rgba(59, 130, 246, 0.65);
 }
+
+/* ===== Vehicle Info – spezifische Styles ===== */
+
+.vehicle-table .vehicle-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-table .vehicle-id {
+  font-weight: 600;
+  font-family: monospace;
+  font-size: 0.88rem;
+}
+
+.vehicle-table .vehicle-name {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.vehicle-table .vehicle-operator {
+  font-weight: 500;
+  font-size: 0.86rem;
+}
+
+.vehicle-table .vehicle-line {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+/* Status-Pills für Fahrzeuge (nutzen deine status-pill Basis) */
+.status-vehicle-active {
+  background: rgba(22, 163, 74, 0.12);
+  color: #6ee7b7;
+  border: 1px solid rgba(22, 163, 74, 0.9);
+}
+
+.status-vehicle-maintenance {
+  background: rgba(234, 179, 8, 0.1);
+  color: #fbbf24;
+  border: 1px solid rgba(234, 179, 8, 0.9);
+}
+
+.status-vehicle-offline {
+  background: rgba(55, 65, 81, 0.9);
+  color: #e5e7eb;
+  border: 1px solid rgba(31, 41, 55, 1);
+}
+
+/* Software-Badge + Label */
+.vehicle-software {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.code-badge {
+  font-family: monospace;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.software-label-ok {
+  font-size: 0.75rem;
+  color: #4ade80;
+}
+
+.software-label-outdated {
+  font-size: 0.75rem;
+  color: #fb7185;
+}
+
+/* Kleinere Text-Styles für Wartung / Standort / letzte Meldung */
+.vehicle-maintenance,
+.vehicle-location,
+.vehicle-last-seen {
+  font-size: 0.8rem;
+  color: #e5e7eb;
+}
