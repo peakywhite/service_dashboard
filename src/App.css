@@ -796,3 +796,53 @@
   font-size: 0.8rem;
   color: #e5e7eb;
 }
+
+.vehicle-vcus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.vcu-badge {
+  font-size: 0.78rem;
+}
+
+.vehicle-vcus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.vcu-badge {
+  font-size: 0.78rem;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+}
+
+/* Online = grün */
+.vcu-status-online {
+  background: rgba(22, 163, 74, 0.12);
+  border: 1px solid rgba(22, 163, 74, 0.9);
+  color: #bbf7d0;
+}
+
+/* Offline = rot */
+.vcu-status-offline {
+  background: rgba(185, 28, 28, 0.16);
+  border: 1px solid rgba(185, 28, 28, 0.95);
+  color: #fecaca;
+}
+
+/* Wartung = gelb/orange */
+.vcu-status-wartung {
+  background: rgba(234, 179, 8, 0.16);
+  border: 1px solid rgba(234, 179, 8, 0.9);
+  color: #fef3c7;
+}
+
+/* Fallback */
+.vcu-status-unknown {
+  background: rgba(55, 65, 81, 0.6);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  color: #e5e7eb;
+}
